@@ -1,3 +1,7 @@
+html {
+  background-color: aliceblue;
+}
+
 body {
   font-family: "Nunito", sans-serif;
   width: 80%;
@@ -7,6 +11,7 @@ body {
 
 h1 {
   font-size: 3rem;
+  font-weight: 900;
 }
 
 h1, h2, p, ul, li {
@@ -23,6 +28,7 @@ h1, h2, p, ul, li {
 
 .bio, a {
   border: 1px solid black;
+  background-color: white;
 }
 
 .main {
@@ -72,6 +78,7 @@ ul {
   list-style-type: circle;
   padding-left: 25px;
 }
+
 
 
 
