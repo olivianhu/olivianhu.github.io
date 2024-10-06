@@ -1,5 +1,6 @@
 html {
   background-color: aliceblue;
+  cursor: url('images/cursor.png'), auto;
 }
 
 body {
@@ -48,6 +49,7 @@ a {
 
 a:hover {
   background-color: rgba(0, 0, 0, 0.05);
+  cursor: url('images/mouse.png'), auto;
 }
 
 .socials {
