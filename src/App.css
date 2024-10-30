@@ -1,38 +1,159 @@
-.App {
-  text-align: center;
+html {
+  background-color: aliceblue;
+  cursor: url('images/cursor.png'), auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Nunito", sans-serif;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 100px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  font-size: 3rem;
+  font-weight: 900;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h1, h2, p, ul, li {
+  margin: 0;
+}
+
+.header {
+  border-bottom: 1px solid black;
+}
+
+.header, .body{
+  padding: 15px 20px;
+}
+
+.bio, a {
+  border: 1px solid black;
+  background-color: white;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+} 
+
+a {
+ padding: 5px 8px;
+ border-radius: 5px;
+ display: inline-block;
+ margin-top: 15px;
+ text-decoration: none;
+ color: black;
+}
+
+a:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  cursor: url('images/mouse.png'), auto;
+}
+
+.socials {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 15px;
+  float: right;
+  margin-bottom: 50px;
 }
 
-.App-link {
-  color: #61dafb;
+.profile {
+  object-fit: cover;
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+img {
+  border: black 1px solid;
+}
+
+p, li {
+  line-height: 1.5rem;
+}
+
+p {
+  margin-bottom: 5px;
+}
+
+ul {
+  list-style-type: circle;
+  padding-left: 25px;
+}
+
+
+
+
+
+@media screen and (max-width: 2000px) {
+  body {
+    width: 55%; 
   }
 }
+
+@media screen and (max-width: 1600px) {
+  body {
+    width: 60%; 
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  body {
+    width: 70%; 
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    width: 80%; 
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  body {
+    width: 80%; 
+  }
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  } 
+  p {
+    line-height: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  body {
+    width: 80%; 
+  }
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  } 
+  p,li {
+    line-height: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main {
+    display: block;
+    width: 75%;
+    margin: 0 auto;
+  }
+  img {
+    margin-bottom: 20px;
+  }
+  .socials {
+    position: relative;
+    left: -12%;
+  }
+  p {
+    line-height: 1.5rem;
+  }
+}
+
+
+
