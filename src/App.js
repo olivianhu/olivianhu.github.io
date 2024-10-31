@@ -26,8 +26,8 @@ const App = () => {
         </div>
       </div>
       <div className="socials">
-        <a href="https://github.com/olivianhu">Github</a>
-        <a href="https://www.linkedin.com/in/olivianhu/">LinkedIn</a>
+        <a href="https://github.com/olivianhu" target='_blank' rel='noreferrer'>Github</a>
+        <a href="https://www.linkedin.com/in/olivianhu/" target='_blank' rel='noreferrer'>LinkedIn</a>
       </div>
     </div>
   );
