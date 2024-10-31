@@ -5,11 +5,10 @@ import React from 'react';
 const App = () => {
   return (
     <div>
-       <div className="main">
-       <img className="profile" src={require('./images/profile_photo.jpeg')} alt={"Olivia Hu"}/>
-        
+      <div className="main">
+        <img className="profile" src={require('./images/profile_photo.jpeg')} alt={"Olivia Hu"}/>
         <div className="bio">
-          <div className="header">
+          <div className="name">
             <h1>Olivia Hu</h1>
             <h2>Computer Science student at UPenn</h2>
           </div>

@@ -19,11 +19,11 @@ h1, h2, p, ul, li {
   margin: 0;
 }
 
-.header {
+.name {
   border-bottom: 1px solid black;
 }
 
-.header, .body{
+.name, .body{
   padding: 15px 20px;
 }
 
@@ -80,8 +80,6 @@ ul {
   list-style-type: circle;
   padding-left: 25px;
 }
-
-
 
 
 
