@@ -105,7 +105,7 @@ html {
 }
 
 .homepage {
-  background-image: url('../public/assets/home.png');
+  background-image: url('public/assets/home.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -115,7 +115,7 @@ html {
 }
 
 .aboutpage {
-  background-image: url('../public/assets/about.png');
+  background-image: url('public/assets/about.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
