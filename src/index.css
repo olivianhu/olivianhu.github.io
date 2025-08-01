@@ -32,7 +32,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   color: #213547;
-  background-image: url('./assets/background.png');
+  background-image: url('../public/assets/background.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -105,7 +105,7 @@ html {
 }
 
 .homepage {
-  background-image: url('./assets/home.png');
+  background-image: url('../public/assets/home.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -115,7 +115,7 @@ html {
 }
 
 .aboutpage {
-  background-image: url('./assets/about.png');
+  background-image: url('../public/assets/about.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
