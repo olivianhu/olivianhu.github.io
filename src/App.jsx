@@ -985,10 +985,10 @@ function ExperiencePage() {
               <div key={experience.id} className="bg-white opacity-90 p-8">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div className="flex items-center gap-4">
-                    <div className="h-12 flex items-center justify-center">
+                    <div className="h-12 flex items-center justify-center hidden sm:block">
                       <img
                         src={experience.image}
-                        className="w-full h-full object-cover object-center"
+                        className="w-full h-full object-cover object-center "
                       />
                     </div>
                     <div>
@@ -1038,7 +1038,7 @@ function ExperiencePage() {
               <div key={education.id} className="bg-white opacity-90 p-8">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div className="flex items-center gap-4">
-                    <div className="h-12 flex items-center justify-center">
+                    <div className="h-12 flex items-center justify-center hidden sm:block">
                       <img
                         src={education.image}
                         className="w-full h-full object-cover object-center"
