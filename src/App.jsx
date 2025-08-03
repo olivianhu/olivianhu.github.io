@@ -7,6 +7,20 @@ import {
 } from 'react-router-dom';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useEffect } from 'react';
+
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth', // use 'auto' if you don't want animation
+    });
+  }, [pathname]);
+
+  return null;
+}
 
 // Navigation Component
 function Navigation() {
@@ -302,9 +316,7 @@ function AboutPage() {
           </div>
 
           {/* Personal Images Gallery */}
-          <div
-            className={`px-4 md:px-16 mx-auto relative`}
-          >
+          <div className={`px-4 md:px-16 mx-auto relative`}>
             {/* Personal Photo */}
             <div className="absolute top-4 md:top-7 right-4 md:right-20">
               <img
@@ -1227,6 +1239,7 @@ function ResumePage() {
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen">
         <Navigation />
         <Routes>
