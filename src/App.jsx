@@ -216,17 +216,23 @@ function HomePage() {
   return (
     <div className="min-h-screen homepage">
       <section className="pt-30 pb-16 px-4 sm:px-6 lg:px-8">
-        <div className="px-16 mx-auto text-right">
+        <div className="px-4 lg:px-16 mx-auto text-right">
           <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold text-[#2a2a2a] mb-6 ">
             Olivia Hu
           </h1>
-          <div className="max-w-lg min-[1450px]:max-w-xl mx-auto">
+          <div className="max-w-sm min-[1200px]:max-w-md min-[1500px]:max-w-xl mx-auto">
             <p className="text-lg md:text-xl text-[#2a2a2a] mb-8 mx-auto">
               Junior at UPenn,
               <br />
               SWE intern at Gusto,
               <br />
               and NYC explorer
+              <br />
+              <br />
+              <span className="text-md md:text-lg">
+                Looking for opportunities <br /> to make the world
+                <br /> a better place!
+              </span>
             </p>
             <Link
               to="/about"
@@ -429,7 +435,7 @@ function AboutPage() {
           {/* Personal Photo */}
           <div className="block min-[1300px]:hidden">
             <img src="/me.JPG" alt="Olivia Hu" className="" />
-            <div className="z-10 text-sm md:text-md text-black bg-white p-4">
+            <div className="z-10 text-sm md:text-md text-black bg-white opacity-90 p-4">
               <span className="font-bold">some facts that define me</span>
               <ul className="z-10 text-xs md:text-sm text-black">
                 <li>home: st louis, mo</li>
@@ -464,7 +470,7 @@ function AboutPage() {
                 />
               </div>
 
-              <div className="z-10 text-black bg-white p-4">
+              <div className="z-10 text-black bg-white opacity-90 p-4">
                 <span className="font-bold text-sm md:text-md lg:text-lg">
                   i love food so much
                 </span>{' '}
@@ -492,7 +498,7 @@ function AboutPage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="z-10 text-black bg-white p-4">
+              <div className="z-10 text-black bg-white opacity-90 p-4">
                 <span className="font-bold text-sm md:text-md lg:text-lg">
                   music 4 life
                 </span>
@@ -522,7 +528,7 @@ function AboutPage() {
                 />
               </div>
 
-              <div className="z-10 text-black bg-white p-4">
+              <div className="z-10 text-black bg-white opacity-90 p-4">
                 <span className="font-bold text-sm md:text-md lg:text-lg">
                   reading brings me so much joy and comfort
                 </span>
@@ -549,7 +555,7 @@ function AboutPage() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="z-10 text-xs md:text-sm lg:text-md text-black bg-white p-4">
+              <div className="z-10 text-xs md:text-sm lg:text-md text-black bg-white opacity-90 p-4">
                 <span className="font-bold text-sm md:text-md lg:text-lg">
                   my lovely communities!
                 </span>
@@ -563,7 +569,7 @@ function AboutPage() {
           {/* Personal Photo */}
           <div className="hidden min-[1300px]:block">
             <img src="/me.JPG" alt="Olivia Hu" className="" />
-            <div className="z-10 text-sm md:text-md lg:text-lg text-black bg-white p-4">
+            <div className="z-10 text-sm md:text-md lg:text-lg text-black bg-white opacity-90 p-4">
               <span className="font-bold">some facts that define me</span>
               <ul className="z-10 text-xs md:text-sm lg:text-md text-black">
                 <li>home: st louis, mo</li>
@@ -596,63 +602,61 @@ function ProjectsPage() {
   const projects = [
     {
       id: 1,
-      title: 'E-Commerce Platform',
+      title: 'Align',
       description:
-        'A full-stack e-commerce platform built with React, Node.js, and MongoDB. Features include user authentication, product management, shopping cart, and payment integration.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      image: 'Project Screenshot',
-      liveDemo: '#',
-      github: '#',
+        'A full-stack web application designed to help users track availability and coordinate schedules efficiently. Features include user authentication, creating and managing events, marking priority or preferred time slots, and visualizing availability across participants.',
+      technologies: ['React + Vite', 'Node.js', 'Express', 'Supabase'],
+      image: '/align.png',
+      liveDemo:
+        'https://docs.google.com/presentation/d/1-yzxukPTdmTA5stL-u5hwPdLSDyREvQmADc8eb2KRpo/preview?rm=minimal&slide=id.g356b7b74dce_12_213',
+      github: 'https://github.com/olivianhu/Align',
     },
     {
       id: 2,
-      title: 'Task Management App',
+      title: 'Penn OS',
       description:
-        'A collaborative task management application with real-time updates, team collaboration features, and progress tracking.',
-      technologies: ['React Native', 'Firebase', 'Redux'],
-      image: 'Project Screenshot',
-      liveDemo: '#',
-      github: '#',
+        'A UNIX-like, user-level operating system with a FAT-based filesystem, a kernel, and a task scheduler. Features a command-line shell with job control, foreground and background job execution, built-in shell functions, and signal handling.',
+      technologies: ['C'],
+      image: '/pennos.png',
     },
     {
       id: 3,
-      title: 'Data Visualization Dashboard',
+      title: 'Penn Course Plan',
       description:
-        'An interactive dashboard for visualizing complex datasets with customizable charts and real-time data updates.',
-      technologies: ['Python', 'Django', 'PostgreSQL', 'D3.js'],
-      image: 'Project Screenshot',
-      liveDemo: '#',
-      github: '#',
+        'A course planning web app designed to help Penn students organize their class schedules. Implemented a breaks feature that allows students to input and visualize breaks within their weekly timetable, improving schedule customization and balance. ',
+      technologies: ['React', 'Typescript', 'Redux'],
+      image: '/penncourseplan.png',
+      liveDemo: 'https://penncourseplan.com/',
+      github: 'https://github.com/pennlabs/penn-courses',
     },
     {
       id: 4,
-      title: 'Social Media Analytics',
+      title: 'Airbnb Clone',
       description:
-        'A tool for analyzing social media metrics and generating insights with automated reporting and trend analysis.',
-      technologies: ['Python', 'Flask', 'AWS', 'Pandas'],
-      image: 'Project Screenshot',
-      liveDemo: '#',
-      github: '#',
+        'A full-stack rental platform built with React, Node.js, and MongoDB. Features include user authentication, property listings with images and descriptions, and booking functionality. The app focuses on core rental workflows to provide a smooth experience for both hosts and guests.',
+      technologies: ['React + Vite', 'Node.js', 'MongoDB'],
+      image: '/airbnb clone.png',
+      liveDemo: 'https://www.youtube.com/watch?v=hKyWRI0RIps',
+      github: 'https://github.com/olivianhu/Airbnb-clone',
     },
     {
       id: 5,
-      title: 'Weather App',
+      title: 'Minesweeper',
       description:
-        'A weather application with location-based forecasts, weather alerts, and beautiful UI design.',
-      technologies: ['React', 'OpenWeather API', 'Tailwind CSS'],
-      image: 'Project Screenshot',
-      liveDemo: '#',
-      github: '#',
+        'A Minesweeper game built with an interactive GUI and support for file I/O operations. Players can reveal cells, flag mines, and track progress in real time. The game includes functionality to save and load game states, allowing users to pause and resume play at any time.',
+      technologies: ['Java Swing', 'JUnit', 'File I/O'],
+      image: '/minesweeper.png',
+      liveDemo:
+        'https://github.com/user-attachments/assets/db55590a-af5a-4977-9e44-d5ad2c68758a',
+      github: 'https://github.com/olivianhu/Minesweeper',
     },
     {
       id: 6,
-      title: 'Portfolio Website',
+      title: 'Bank Account Fraud Models',
       description:
-        'A responsive personal portfolio website showcasing projects, skills, and professional experience.',
-      technologies: ['React', 'Tailwind CSS', 'Vite'],
-      image: 'Project Screenshot',
-      liveDemo: '#',
-      github: '#',
+        'A fraud detection project analyzing 1,000,000 bank accounts to identify indicators of fraudulent activity. Conducted extensive EDA and trained models with 73.9% recall, optimizing for high fraud catch rates. Used techniques such as downsampling, SMOTE, and class weight tuning to address class imbalance.',
+      technologies: ['Python', 'Pandas', 'Scikit-learn', 'NumPy', 'PyTorch'],
+      image: '/bankfraudmodels.png',
     },
   ];
 
@@ -660,18 +664,22 @@ function ProjectsPage() {
     <div className="min-h-screen">
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl font-bold text-center text-gray-900 mb-12">
+          <h1 className="text-5xl font-bold text-center text-gray-900 mb-12">
             My Projects
           </h1>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-16">
             {projects.map(project => (
               <div
                 key={project.id}
-                className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                className="bg-white opacity-90 overflow-hidden"
               >
-                <div className="bg-gray-200 h-48 flex items-center justify-center">
-                  <p className="text-gray-500">{project.image}</p>
+                <div className="bg-gray-200 h-52 flex items-center justify-center">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover object-center"
+                  />
                 </div>
                 <div className="p-4">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
@@ -689,18 +697,24 @@ function ProjectsPage() {
                     ))}
                   </div>
                   <div className="flex gap-4">
-                    <a
-                      href={project.liveDemo}
-                      className="text-gray-600 hover:text-gray-800 font-medium"
-                    >
-                      Live Demo
-                    </a>
-                    <a
-                      href={project.github}
-                      className="text-gray-600 hover:text-gray-800 font-medium"
-                    >
-                      GitHub
-                    </a>
+                    {project.liveDemo && (
+                      <a
+                        href={project.liveDemo}
+                        target="_blank"
+                        className="text-gray-900 hover:text-gray-800 font-medium"
+                      >
+                        <span className="underline">Live Demo</span>
+                      </a>
+                    )}
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        className="text-gray-900 hover:text-gray-800 font-medium"
+                      >
+                        <span className="underline">GitHub</span>
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -717,45 +731,51 @@ function ExperiencePage() {
   const experiences = [
     {
       id: 1,
+      image: '/gusto.png',
       company: 'Gusto',
       position: 'Software Engineering Intern',
-      duration: 'Summer 2024',
-      location: 'San Francisco, CA',
+      duration: 'Summer 2025',
+      location: 'New York, NY',
       description: [
-        'Developed and maintained full-stack web applications using React and Node.js',
-        'Collaborated with cross-functional teams to deliver high-quality software solutions',
-        'Participated in code reviews and contributed to team best practices',
-        'Worked on improving application performance and user experience',
+        'Spearheaded the full-stack development of the Insurance Hub, the first centralized dashboard for Business Insurance within Gusto’s platform',
+        'Contributed to service-to-service communication logic and ensured backward compatibility during backend changes',
+        'Designed and implemented new API endpoints across multiple codebases, enabling seamless policy data retrieval',
       ],
-      technologies: ['React', 'Node.js', 'JavaScript', 'Git'],
+      technologies: ['React', 'Typescript', 'Ruby on Rails', 'Git'],
     },
     {
       id: 2,
+      image: '/upenn.png',
       company: 'University of Pennsylvania',
-      position: 'Teaching Assistant - CS 1100',
-      duration: 'Fall 2023 - Spring 2024',
+      position: 'Teaching Assistant - CIS 1210 (previously CIS 1600)',
+      duration: 'Spring 2024 - Present',
       location: 'Philadelphia, PA',
       description: [
-        'Led weekly recitation sessions for 30+ students in introductory computer science',
-        'Graded assignments and provided constructive feedback to students',
-        'Held office hours to help students with programming concepts and debugging',
-        'Assisted in developing course materials and practice problems',
+        'Assist in teaching data structures and algorithms for 300+ students',
+        'Acted as rubrics committee head for 10 members, delegating tasks and taking responsibility for rubric quality',
+        'Lead recitation for 16 students, reviewing and teaching concepts to aid students’ understanding',
       ],
-      technologies: ['Python', 'Java', 'Teaching', 'Mentoring'],
+      technologies: [
+        'Java',
+        'Data Structures & Algorithms',
+        'Discrete Math',
+        'Teaching',
+        'Mentoring',
+      ],
     },
     {
       id: 3,
-      company: 'Tech Startup (Previous)',
-      position: 'Frontend Developer Intern',
-      duration: 'Summer 2023',
-      location: 'New York, NY',
+      image: '/perelman.png',
+      company: 'University of Pennsylvania Perelman School of Medicine',
+      position: 'Undergraduate Researcher (Cheng Lab)',
+      duration: 'Summer 2024',
+      location: 'Philadelphia, PA',
       description: [
-        'Built responsive user interfaces using React and modern CSS frameworks',
-        'Implemented new features and fixed bugs in existing applications',
-        'Worked closely with designers to ensure pixel-perfect implementations',
-        'Optimized application performance and improved loading times',
+        'Conduct computational analysis of multi-omics data to identify genes involved in neurodegeneration and regenerative failure within the eye',
+        'Develop and maintain a data preprocessing and visualization pipeline to streamline analysis of large-scale single-cell datasets',
+        'Utilize ScanPy to perform dimensionality reduction, clustering, and cell-type annotation, learning the tool from scratch and adapting it to lab-specific needs',
       ],
-      technologies: ['React', 'TypeScript', 'CSS', 'Git'],
+      technologies: ['Python', 'NumPy', 'ScanPy', 'Linux', 'R'],
     },
   ];
 
@@ -763,24 +783,29 @@ function ExperiencePage() {
     <div className="min-h-screen">
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <h1 className="text-4xl font-bold text-center text-gray-900 mb-12">
+          <h1 className="text-5xl font-bold text-center text-gray-900 mb-12">
             Work Experience
           </h1>
 
           <div className="space-y-8">
             {experiences.map(experience => (
-              <div
-                key={experience.id}
-                className="bg-white rounded-lg shadow-lg p-8"
-              >
+              <div key={experience.id} className="bg-white opacity-90 p-8">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                  <div>
-                    <h3 className="text-2xl font-semibold text-gray-900">
-                      {experience.position}
-                    </h3>
-                    <p className="text-xl text-gray-600 font-medium">
-                      {experience.company}
-                    </p>
+                  <div className="flex items-center gap-4">
+                    <div className="h-12 flex items-center justify-center">
+                      <img
+                        src={experience.image}
+                        className="w-full h-full object-cover object-center"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900">
+                        {experience.position}
+                      </h3>
+                      <p className="text-lg text-gray-600 font-medium">
+                        {experience.company}
+                      </p>
+                    </div>
                   </div>
                   <div className="text-right mt-2 md:mt-0">
                     <p className="text-gray-600">{experience.duration}</p>
@@ -793,7 +818,7 @@ function ExperiencePage() {
                 <ul className="space-y-2 mb-6">
                   {experience.description.map((item, index) => (
                     <li key={index} className="flex items-start">
-                      <span className="text-gray-600 mr-2">•</span>
+                      <span className="text-gray-600 mr-2"> </span>
                       <span className="text-gray-600">{item}</span>
                     </li>
                   ))}
