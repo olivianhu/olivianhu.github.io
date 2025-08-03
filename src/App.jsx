@@ -247,7 +247,7 @@ function HomePage() {
               className="text-[#2a2a2a] hover:text-[#7f1325]"
             >
               <p className="text-lg underline inline-block hover:no-underline">
-                My Work
+                My Projects
               </p>
             </Link>
           </div>
@@ -660,6 +660,105 @@ function ProjectsPage() {
     },
   ];
 
+  const creative = [
+    {
+      id: 1,
+      title: 'Running On Empty',
+      image: '/burnout spread.png',
+      date: 'fall 2021',
+    },
+    {
+      id: 2,
+      title: 'Looking at Lunar',
+      image: '/lunar spread.png',
+      date: 'spring 2022',
+    },
+    {
+      id: 3,
+      title: 'Month of Madness',
+      image: '/march spread.png',
+      date: 'spring 2022',
+    },
+    {
+      id: 4,
+      title: 'Slang searching',
+      image: '/slang spread.png',
+      date: 'Fall 2022',
+    },
+    {
+      id: 5,
+      title: 'Truth Behind the Melting Pot',
+      image: '/immigration back.png',
+      date: 'spring 2023',
+    },
+    {
+      id: 6,
+      title: 'The Home Issue',
+      image: '/home cover.jpg',
+      date: 'spring 2023',
+    },
+    {
+      id: 7,
+      title: 'America’s Architecture',
+      image: '/house back.png',
+      date: 'spring 2023',
+    },
+    {
+      id: 8,
+      title: 'The Girl With the Chestnut Hair',
+      image: '/lit mag.png',
+      date: 'spring 2023',
+    },
+    {
+      id: 9,
+      title: 'Copy',
+      image: '/art_copy.png',
+      date: 'spring 2024',
+    },
+    {
+      id: 10,
+      title: 'Camera Roll',
+      image: '/camera_roll.png',
+      date: 'spring 2024',
+    },
+    {
+      id: 11,
+      title: 'Tyler',
+      image: '/celebrity.png',
+      date: 'spring 2024',
+    },
+    {
+      id: 12,
+      title: 'Godly Bodies and Ungodly Expectations',
+      image: '/WALK spread.png',
+      date: 'fall 2024',
+    },
+    {
+      id: 13,
+      title: 'Foundation Poster #1',
+      image: '/poster 1.png',
+      date: 'spring 2025',
+    },
+    {
+      id: 14,
+      title: 'Foundation Poster #2',
+      image: '/poster 2.png',
+      date: 'spring 2025',
+    },
+    {
+      id: 15,
+      title: 'Foundation Poster #3',
+      image: '/poster 3.png',
+      date: 'spring 2025',
+    },
+    {
+      id: 16,
+      title: 'Exhibition Poster',
+      image: '/exhibition poster.png',
+      date: 'spring 2025',
+    },
+  ];
+
   return (
     <div className="min-h-screen">
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
@@ -721,6 +820,80 @@ function ProjectsPage() {
             ))}
           </div>
         </div>
+
+        <div className="max-w-6xl mx-auto mt-40">
+          <h1 className="text-5xl font-bold text-center text-gray-900 mb-12">
+            Creative!!
+          </h1>
+
+          <div className="hidden min-[1000px]:flex bg-white/50 p-16 rounded-2xl">
+            <div className="flex">
+              <div className="mr-16">
+                {creative
+                  .filter((_, i) => i % 2 === 0)
+                  .map(art => (
+                    <div key={art.id} className="overflow-hidden mb-8">
+                      <div className="bg-gray-200 flex items-center justify-center">
+                        <img
+                          src={art.image}
+                          alt={art.title}
+                          className="w-full h-full object-cover object-center"
+                        />
+                      </div>
+                      <div className="text-center mt-2">
+                        <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                          {art.title} ({art.date})
+                        </h3>
+                      </div>
+                    </div>
+                  ))}
+              </div>
+              <div>
+                {creative
+                  .filter((_, i) => i % 2 === 1)
+                  .map(art => (
+                    <div key={art.id} className="overflow-hidden mb-16">
+                      <div className="bg-gray-200 flex items-center justify-center">
+                        <img
+                          src={art.image}
+                          alt={art.title}
+                          className="w-full h-full object-cover object-center"
+                        />
+                      </div>
+                      <div className="text-center mt-2">
+                        <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                          {art.title} ({art.date})
+                        </h3>
+                      </div>
+                    </div>
+                  ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="flex min-[1000px]:hidden bg-white/50 p-16 rounded-2xl">
+            <div className="flex">
+              <div className="">
+                {creative.map(art => (
+                  <div key={art.id} className="overflow-hidden mb-12">
+                    <div className="bg-gray-200 flex items-center justify-center">
+                      <img
+                        src={art.image}
+                        alt={art.title}
+                        className="w-full h-full object-cover object-center"
+                      />
+                    </div>
+                    <div className="text-center mt-2">
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                        {art.title} ({art.date})
+                      </h3>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </div>
   );
@@ -748,7 +921,7 @@ function ExperiencePage() {
       image: '/upenn.png',
       company: 'University of Pennsylvania',
       position: 'Teaching Assistant - CIS 1210 (previously CIS 1600)',
-      duration: 'Spring 2024 - Present',
+      duration: 'spring 2024 - Present',
       location: 'Philadelphia, PA',
       description: [
         'Assist in teaching data structures and algorithms for 300+ students',
@@ -779,12 +952,32 @@ function ExperiencePage() {
     },
   ];
 
+  const educations = [
+    {
+      id: 1,
+      image: '/upenn.png',
+      school: 'University of Pennsylvania',
+      duration: 'August 2023 - May 2027',
+      degree: 'Bachelor of Science in Engineering (BSE) in Computer Science',
+      location: 'Philadelphia, PA',
+      concentration: 'Artificial Intelligence',
+      minor: 'Mathematics',
+      gpa: '4.0/4.0',
+      activities: [
+        'Penn Spark',
+        'Penn Labs',
+        'Theta Tau',
+        'Women in CS (Education Committee)',
+      ],
+    },
+  ];
+
   return (
     <div className="min-h-screen">
       <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <h1 className="text-5xl font-bold text-center text-gray-900 mb-12">
-            Work Experience
+            Experience
           </h1>
 
           <div className="space-y-8">
@@ -833,6 +1026,57 @@ function ExperiencePage() {
                       {tech}
                     </span>
                   ))}
+                </div>
+              </div>
+            ))}
+          </div>
+          <h1 className="text-5xl font-bold text-center text-gray-900 my-12">
+            Education
+          </h1>
+          <div className="space-y-8">
+            {educations.map(education => (
+              <div key={education.id} className="bg-white opacity-90 p-8">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <div className="flex items-center gap-4">
+                    <div className="h-12 flex items-center justify-center">
+                      <img
+                        src={education.image}
+                        className="w-full h-full object-cover object-center"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold text-gray-900">
+                        {education.school}
+                      </h3>
+                      <p className="text-lg text-gray-600 font-medium">
+                        {education.degree}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="text-right mt-2 md:mt-0">
+                    <p className="text-gray-600">{education.duration}</p>
+                    <p className="text-sm text-gray-500">
+                      {education.location}
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <ul className="space-y-2">
+                    <li className="flex items-start text-gray-600">
+                      <span className="ml-2">
+                        Concentration: {education.concentration}, Minor:{' '}
+                        {education.minor}
+                      </span>
+                    </li>
+                    <li className="flex items-start text-gray-600">
+                      <span className="ml-2">GPA: {education.gpa}</span>
+                    </li>
+                    <li className="flex items-start text-gray-600">
+                      <span className="ml-2">
+                        Activties: {education.activities.join(', ')}
+                      </span>
+                    </li>
+                  </ul>
                 </div>
               </div>
             ))}
