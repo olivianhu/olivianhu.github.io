@@ -871,7 +871,7 @@ function ProjectsPage() {
             </div>
           </div>
 
-          <div className="flex min-[1000px]:hidden bg-white/50 p-16 rounded-2xl">
+          <div className="flex min-[1000px]:hidden bg-white/50 p-4 rounded-2xl">
             <div className="flex">
               <div className="">
                 {creative.map(art => (
