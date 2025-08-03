@@ -22,14 +22,14 @@ function Navigation() {
 
   return (
     <nav className="fixed top-0 w-full z-50">
-      <div className="px-10 mx-auto">
+      <div className="px-8 md:px-20 mx-auto py-5">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="text-xl font-bold text-gray-800 ">
             Olivia Hu
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden min-[950px]:flex space-x-8 items-center">
             {navItems.map(item => (
               <Link
                 key={item.path}
@@ -43,25 +43,84 @@ function Navigation() {
                 {item.label}
               </Link>
             ))}
+
+            {/* Social Media Icons */}
+            <div className="flex space-x-4 ml-4">
+              {/* Email */}
+              <a
+                href="mailto:huolivia@seas.upenn.edu"
+                className="text-[#2a2a2a] hover:text-[#7f1325] transition-colors duration-200"
+                title="Email"
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </a>
+
+              {/* GitHub */}
+              <a
+                href="https://github.com/olivianhu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#2a2a2a] hover:text-[#7f1325] transition-colors duration-200"
+                title="GitHub"
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+              </a>
+
+              {/* LinkedIn */}
+              <a
+                href="https://linkedin.com/in/olivianhu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#2a2a2a] hover:text-[#7f1325] transition-colors duration-200"
+                title="LinkedIn"
+              >
+                <svg
+                  className="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+              </a>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden">
+          <div className="min-[950px]:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-[#2a2a2a] hover:text-[#2a2a2a]"
+              className="text-[#2a2a2a] hover:text-[#2a2a2a] background-transparent"
             >
               <svg
-                className="w-6 h-6"
+                xmlns="http://www.w3.org/2000/svg"
                 fill="none"
-                stroke="currentColor"
                 viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
               >
                 <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
                 />
               </svg>
             </button>
@@ -70,7 +129,7 @@ function Navigation() {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-white border-t border-gray-200">
+          <div className="min-[950px]:hidden bg-gray-50 rounded-lg">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map(item => (
                 <Link
@@ -79,13 +138,71 @@ function Navigation() {
                   onClick={() => setIsMenuOpen(false)}
                   className={`block px-3 py-2 rounded-md text-base font-medium ${
                     location.pathname === item.path
-                      ? 'text-[#2a2a2a] bg-[#2a2a2a]'
-                      : 'text-[#2a2a2a] hover:text-[#2a2a2a] hover:bg-gray-50'
+                      ? 'text-[#2a2a2a] bg-gray-200'
+                      : 'text-[#2a2a2a] hover:text-[#2a2a2a] hover:bg-gray-100'
                   }`}
                 >
                   {item.label}
                 </Link>
               ))}
+
+              {/* Social Media Icons for Mobile */}
+              <div className="flex justify-center space-x-6 pt-4 pb-2 border-t border-gray-200 mt-4">
+                {/* Email */}
+                <a
+                  href="mailto:olivia.hu@example.com"
+                  className="text-[#2a2a2a] hover:text-[#7f1325] transition-colors duration-200"
+                  title="Email"
+                >
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    />
+                  </svg>
+                </a>
+
+                {/* GitHub */}
+                <a
+                  href="https://github.com/oliviahu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#2a2a2a] hover:text-[#7f1325] transition-colors duration-200"
+                  title="GitHub"
+                >
+                  <svg
+                    className="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
+                </a>
+
+                {/* LinkedIn */}
+                <a
+                  href="https://linkedin.com/in/oliviahu"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#2a2a2a] hover:text-[#7f1325] transition-colors duration-200"
+                  title="LinkedIn"
+                >
+                  <svg
+                    className="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                  </svg>
+                </a>
+              </div>
             </div>
           </div>
         )}
@@ -98,13 +215,13 @@ function Navigation() {
 function HomePage() {
   return (
     <div className="min-h-screen homepage">
-      <section className="pt-30 pb-16 px-4 sm:px-6 lg:px-8 hidden">
+      <section className="pt-30 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="px-16 mx-auto text-right">
-          <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold text-[#2a2a2a] mb-6 ">
+          <h1 className="text-5xl md:text-6xl lg:text-8xl font-bold text-[#2a2a2a] mb-6 ">
             Olivia Hu
           </h1>
-          <div className="max-w-xl mx-auto my-60">
-            <p className="text-lg md:text-xl text-[#2a2a2a] mb-8 mx-auto hidden">
+          <div className="max-w-lg min-[1450px]:max-w-xl mx-auto">
+            <p className="text-lg md:text-xl text-[#2a2a2a] mb-8 mx-auto">
               Junior at UPenn,
               <br />
               SWE intern at Gusto,
@@ -163,8 +280,8 @@ function AboutPage() {
   const age = calculateAge('2005-10-08');
 
   return (
-    <div className={`min-h-screen aboutpage`}>
-      <section className="pt-30 px-4 sm:px-6 lg:px-8 hidden">
+    <div className={`min-h-screen`}>
+      <section className="pt-30 px-4 sm:px-6 lg:px-8 hidden aboutpagelarge">
         <div className="px-4 md:px-16 mx-auto text-right">
           <h1 className="text-3xl md:text-5xl lg:text-7xl xl:text-8xl font-bold text-[#2a2a2a]">
             Olivia Hu
@@ -191,7 +308,7 @@ function AboutPage() {
             alt="arrow"
             className="absolute top-4 md:top-7 right-8 md:right-16 lg:right-75 z-10 h-16 md:h-24 lg:h-32 xl:h-80"
           />
-          <div className="absolute top-32 md:top-60 right-8 md:right-32 lg:right-130 z-10 w-24 md:w-32 lg:w-40 text-right text-xs md:text-sm lg:text-lg text-black">
+          <div className="absolute top-32 md:top-40 right-8 md:right-32 lg:right-130 z-10 w-24 md:w-32 lg:w-40 text-right text-xs md:text-sm lg:text-lg text-black">
             some facts that define me
           </div>
           <ul className="absolute top-40 md:top-80 right-8 md:right-32 lg:right-130 z-10 w-24 md:w-40 lg:w-50 text-xs md:text-sm text-black">
@@ -250,7 +367,7 @@ function AboutPage() {
               <br />
               currently reading: demon copperhead and evenings & weekends <br />
             </div>
-            <div className='text-sm'>goodreads: @oliviahu</div>
+            <div className="text-sm">goodreads: @oliviahu</div>
           </div>
 
           {/* Tyler Image */}
@@ -284,6 +401,189 @@ function AboutPage() {
           </div>
           <div className="absolute top-56 md:top-120 left-28 md:left-32 lg:left-182 text-black rotate-90 text-xs">
             high chance u can find me with ot, 160, spark, or labs
+          </div>
+        </div>
+      </section>
+
+      <section className="pt-30 px-4 block aboutpagesmall">
+        <div className="flex gap-2 px-16 mx-auto text-right items-center mb-6 justify-end">
+          <h1 className="text-3xl font-bold text-[#2a2a2a]">me!</h1>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke="rgb(42, 42, 42)"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
+            />
+          </svg>
+        </div>
+
+        {/* Personal Images Gallery */}
+        <div className="pb-10 grid grid-cols-1 min-[1300px]:grid-cols-2 min-[1300px]:grid-cols-[2fr_1fr] gap-18 px-4 md:px-16">
+          {/* Personal Photo */}
+          <div className="block min-[1300px]:hidden">
+            <img src="public/assets/me.JPG" alt="Olivia Hu" className="" />
+            <div className="z-10 text-sm md:text-md text-black bg-white p-4">
+              <span className="font-bold">some facts that define me</span>
+              <ul className="z-10 text-xs md:text-sm text-black">
+                <li>home: st louis, mo</li>
+                <li>house: port washington, ny</li>
+                <li>age: {age} years old</li>
+                <li>school: upenn!</li>
+                <li>fav holiday: christmas</li>
+                <li>
+                  fav saying: "every day, in every way, i am getting better and
+                  better" this is a book quote from beartown by fredrik backman
+                  idk if it counts but i try to live by this
+                </li>
+                <li>
+                  fav games: minecraft, stardew valley, btd6, brawl stars,
+                  valorant, civ 6
+                </li>
+                <li>to the left: more of my favorite things!</li>
+              </ul>
+            </div>
+            <div></div>
+          </div>
+          <div
+            className={`grid grid-cols-1 min-[900px]:grid-cols-2 gap-8 mx-auto transition-opacity duration-2000 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+          >
+            {/* Food Image */}
+            <div className="">
+              <div className="h-[60vh] overflow-hidden">
+                <img
+                  src="public/assets/food.png"
+                  alt="Food"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              <div className="z-10 text-black bg-white p-4">
+                <span className="font-bold text-sm md:text-md lg:text-lg">
+                  i love food so much
+                </span>{' '}
+                <br />
+                <ul className="text-xs md:text-sm lg:text-md">
+                  <li>
+                    favs restaurants: shiro's sushi (sea), mountain house (ny),
+                    double knot (phl), dewey's (stl)
+                  </li>
+                  <li>
+                    favs dishes to cook: clay pot rice, stir fry udon, tofu
+                    stew, curry + chicken katsu
+                  </li>
+                  <li>beli: @oliviahu</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Tyler Image */}
+            <div className="">
+              <div className="h-[60vh] overflow-hidden">
+                <img
+                  src="public/assets/tyler.png"
+                  alt="Tyler"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="z-10 text-black bg-white p-4">
+                <span className="font-bold text-sm md:text-md lg:text-lg">
+                  music 4 life
+                </span>
+                <div className="text-xs md:text-sm lg:text-md">
+                  <ul>
+                    <li>
+                      in order: taylor swift, tyler the creator, frank ocean,
+                      beabadoobee, steve lacy
+                    </li>
+                    <li>
+                      fav songs rn: sugar on my tongue (tyler), 40% (the army,
+                      the navy), ex-factor (lauryn hill), alesis (mk.gee)
+                    </li>
+                    <li>spotify: @oliviahu2020</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Book Image */}
+            <div className="">
+              <div className="h-[60vh] overflow-hidden">
+                <img
+                  src="public/assets/book.png"
+                  alt="Books"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+
+              <div className="z-10 text-black bg-white p-4">
+                <span className="font-bold text-sm md:text-md lg:text-lg">
+                  reading brings me so much joy and comfort
+                </span>
+                <br />
+                <ul className="text-xs md:text-sm lg:text-md">
+                  <li>
+                    favs: a man called ove, harry potter, and tomorrow, and
+                    tomorrow, and tomorrow
+                  </li>
+                  <li>
+                    currently reading: demon copperhead and evenings & weekends
+                  </li>
+                  <li>goodreads: @oliviahu</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* OT Image */}
+            <div className="">
+              <div className="h-[60vh] overflow-hidden">
+                <img
+                  src="public/assets/ot.JPG"
+                  alt="OT"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="z-10 text-xs md:text-sm lg:text-md text-black bg-white p-4">
+                <span className="font-bold text-sm md:text-md lg:text-lg">
+                  my lovely communities!
+                </span>
+                <br />
+                all my love to ot, 160, spark, and labs!! the most kind,
+                inspirational, and splendidly brilliant people i've ever met
+              </div>
+            </div>
+          </div>
+
+          {/* Personal Photo */}
+          <div className="hidden min-[1300px]:block">
+            <img src="public/assets/me.JPG" alt="Olivia Hu" className="" />
+            <div className="z-10 text-sm md:text-md lg:text-lg text-black bg-white p-4">
+              <span className="font-bold">some facts that define me</span>
+              <ul className="z-10 text-xs md:text-sm lg:text-md text-black">
+                <li>home: st louis, mo</li>
+                <li>house: port washington, ny</li>
+                <li>age: {age} years old</li>
+                <li>school: upenn!</li>
+                <li>fav holiday: christmas</li>
+                <li>
+                  fav saying: "every day, in every way, i am getting better and
+                  better" this is a book quote from beartown by fredrik backman
+                  idk if it counts but i try to live by this
+                </li>
+                <li>
+                  fav games: minecraft, stardew valley, btd6, brawl stars,
+                  valorant, civ 6
+                </li>
+                <li>to the left: more of my favorite things!</li>
+              </ul>
+            </div>
+            <div></div>
           </div>
         </div>
       </section>
@@ -373,7 +673,7 @@ function ProjectsPage() {
                 <div className="bg-gray-200 h-48 flex items-center justify-center">
                   <p className="text-gray-500">{project.image}</p>
                 </div>
-                <div className="p-6">
+                <div className="p-4">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">
                     {project.title}
                   </h3>
@@ -534,10 +834,16 @@ function ResumePage() {
               type="application/pdf"
               className="w-full h-screen"
             >
-              <p>
+              <p className="p-10">
                 Your browser does not support PDFs.{' '}
-                <a href="public/assets/Olivia_s_Resume.pdf" target="_blank">
-                  Click here to download the PDF
+                <a
+                  href="public/assets/Olivia_s_Resume.pdf"
+                  target="_blank"
+                  className="text-[#7f1325]"
+                >
+                  <span className="underline">
+                    Click here to download the PDF
+                  </span>
                 </a>
                 .
               </p>
