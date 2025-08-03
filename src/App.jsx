@@ -1006,7 +1006,7 @@ function ExperiencePage() {
       image: '/upenn.png',
       company: 'University of Pennsylvania',
       position: 'Teaching Assistant - CIS 1210 (previously CIS 1600)',
-      duration: 'spring 2024 - Present',
+      duration: 'Spring 2024 - Present',
       location: 'Philadelphia, PA',
       description: [
         'Assist in teaching data structures and algorithms for 300+ students',
