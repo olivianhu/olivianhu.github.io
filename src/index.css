@@ -32,11 +32,11 @@ body {
   min-width: 320px;
   min-height: 100vh;
   color: #213547;
-  background-image: url('/background.png');
+  /* background-image: url('/background.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-attachment: fixed;
+  background-attachment: fixed; */
   overflow: auto;
 }
 

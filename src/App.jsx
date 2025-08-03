@@ -6,6 +6,7 @@ import {
   useLocation,
 } from 'react-router-dom';
 import { useState } from 'react';
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
 
@@ -1241,6 +1242,10 @@ function App() {
     <Router>
       <ScrollToTop />
       <div className="min-h-screen">
+        <div
+          className="fixed top-0 left-0 w-full h-full -z-10 bg-cover bg-center"
+          style={{ backgroundImage: `url('/background.png')` }}
+        />
         <Navigation />
         <Routes>
           <Route path="/" element={<HomePage />} />
