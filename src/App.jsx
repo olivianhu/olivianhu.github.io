@@ -295,7 +295,7 @@ function AboutPage() {
           {/* Personal Photo */}
           <div className="absolute top-4 md:top-7 right-4 md:right-20">
             <img
-              src="/assets/me.JPG"
+              src="/me.JPG"
               alt="Olivia Hu"
               className="h-24 md:h-32 lg:h-40 xl:h-155"
             />
@@ -304,7 +304,7 @@ function AboutPage() {
             me!
           </div>
           <img
-            src="/assets/arrow.png"
+            src="/arrow.png"
             alt="arrow"
             className="absolute top-4 md:top-7 right-8 md:right-16 lg:right-75 z-10 h-16 md:h-24 lg:h-32 xl:h-80"
           />
@@ -322,7 +322,7 @@ function AboutPage() {
           {/* Food Image */}
           <div className="absolute top-48 md:top-82 left-4 md:left-8 lg:left-35">
             <img
-              src="/assets/food.png"
+              src="/food.png"
               alt="Food"
               className="h-16 md:h-24 lg:h-32 xl:h-80"
             />
@@ -354,7 +354,7 @@ function AboutPage() {
           {/* Book Image */}
           <div className="absolute -top-4 md:-top-8 left-16 md:left-24 lg:left-130">
             <img
-              src="/assets/book.png"
+              src="/book.png"
               alt="Books"
               className="h-12 md:h-16 lg:h-20 xl:h-70"
             />
@@ -373,7 +373,7 @@ function AboutPage() {
           {/* Tyler Image */}
           <div className="absolute -top-12 md:-top-25 left-4 md:left-8 lg:left-30">
             <img
-              src="/assets/tyler.png"
+              src="/tyler.png"
               alt="Tyler"
               className="h-16 md:h-20 lg:h-24 xl:h-100"
             />
@@ -391,7 +391,7 @@ function AboutPage() {
           {/* OT Image */}
           <div className="absolute top-48 md:top-82 left-20 md:left-24 lg:left-150">
             <img
-              src="/assets/ot.JPG"
+              src="/ot.JPG"
               alt="OT"
               className="h-16 md:h-24 lg:h-32 xl:h-80"
             />
@@ -428,7 +428,7 @@ function AboutPage() {
         <div className="pb-10 grid grid-cols-1 min-[1300px]:grid-cols-2 min-[1300px]:grid-cols-[2fr_1fr] gap-18 px-4 md:px-16">
           {/* Personal Photo */}
           <div className="block min-[1300px]:hidden">
-            <img src="/assets/me.JPG" alt="Olivia Hu" className="" />
+            <img src="/me.JPG" alt="Olivia Hu" className="" />
             <div className="z-10 text-sm md:text-md text-black bg-white p-4">
               <span className="font-bold">some facts that define me</span>
               <ul className="z-10 text-xs md:text-sm text-black">
@@ -458,7 +458,7 @@ function AboutPage() {
             <div className="">
               <div className="h-[60vh] overflow-hidden">
                 <img
-                  src="/assets/food.png"
+                  src="/food.png"
                   alt="Food"
                   className="w-full h-full object-cover"
                 />
@@ -487,7 +487,7 @@ function AboutPage() {
             <div className="">
               <div className="h-[60vh] overflow-hidden">
                 <img
-                  src="/assets/tyler.png"
+                  src="/tyler.png"
                   alt="Tyler"
                   className="w-full h-full object-cover"
                 />
@@ -516,7 +516,7 @@ function AboutPage() {
             <div className="">
               <div className="h-[60vh] overflow-hidden">
                 <img
-                  src="/assets/book.png"
+                  src="/book.png"
                   alt="Books"
                   className="w-full h-full object-cover"
                 />
@@ -544,7 +544,7 @@ function AboutPage() {
             <div className="">
               <div className="h-[60vh] overflow-hidden">
                 <img
-                  src="/assets/ot.JPG"
+                  src="/ot.JPG"
                   alt="OT"
                   className="w-full h-full object-cover"
                 />
@@ -562,7 +562,7 @@ function AboutPage() {
 
           {/* Personal Photo */}
           <div className="hidden min-[1300px]:block">
-            <img src="/assets/me.JPG" alt="Olivia Hu" className="" />
+            <img src="/me.JPG" alt="Olivia Hu" className="" />
             <div className="z-10 text-sm md:text-md lg:text-lg text-black bg-white p-4">
               <span className="font-bold">some facts that define me</span>
               <ul className="z-10 text-xs md:text-sm lg:text-md text-black">
@@ -830,14 +830,14 @@ function ResumePage() {
 
           <div className="bg-white rounded-lg shadow-lg overflow-hidden">
             <object
-              data="/assets/Olivia_s_Resume.pdf"
+              data="/Olivia_s_Resume.pdf"
               type="application/pdf"
               className="w-full h-screen"
             >
               <p className="p-10">
                 Your browser does not support PDFs.{' '}
                 <a
-                  href="/assets/Olivia_s_Resume.pdf"
+                  href="/Olivia_s_Resume.pdf"
                   target="_blank"
                   className="text-[#7f1325]"
                 >

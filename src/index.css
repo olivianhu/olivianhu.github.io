@@ -32,7 +32,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   color: #213547;
-  background-image: url('../public/assets/background.png');
+  background-image: url('/background.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
