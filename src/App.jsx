@@ -46,19 +46,31 @@ function Navigation() {
 
           {/* Desktop Navigation */}
           <div className="hidden min-[950px]:flex space-x-8 items-center">
-            {navItems.map(item => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={`transition-colors duration-200 ${
-                  location.pathname === item.path
-                    ? 'text-[#2a2a2a] font-medium'
-                    : 'text-[#2a2a2a] hover:text-[#2a2a2a]'
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
+            {navItems.map(item =>
+              item.label === 'Resume' ? (
+                <a
+                  key={item.path}
+                  href="/Olivia_s_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#2a2a2a] hover:text-[#2a2a2a] transition-colors duration-200"
+                >
+                  {item.label}
+                </a>
+              ) : (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={`transition-colors duration-200 ${
+                    location.pathname === item.path
+                      ? 'text-[#2a2a2a] font-medium'
+                      : 'text-[#2a2a2a] hover:text-[#2a2a2a]'
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              )
+            )}
 
             {/* Social Media Icons */}
             <div className="flex space-x-4 ml-4">
@@ -147,20 +159,33 @@ function Navigation() {
         {isMenuOpen && (
           <div className="min-[950px]:hidden bg-gray-50 rounded-lg">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {navItems.map(item => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={`block px-3 py-2 rounded-md text-base font-medium ${
-                    location.pathname === item.path
-                      ? 'text-[#2a2a2a] bg-gray-200'
-                      : 'text-[#2a2a2a] hover:text-[#2a2a2a] hover:bg-gray-100'
-                  }`}
-                >
-                  {item.label}
-                </Link>
-              ))}
+              {navItems.map(item =>
+                item.label === 'Resume' ? (
+                  <a
+                    key={item.path}
+                    href="/Olivia_s_Resume.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block px-3 py-2 rounded-md text-base font-medium text-[#2a2a2a] hover:text-[#2a2a2a] hover:bg-gray-100"
+                  >
+                    {item.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    onClick={() => setIsMenuOpen(false)}
+                    className={`block px-3 py-2 rounded-md text-base font-medium ${
+                      location.pathname === item.path
+                        ? 'text-[#2a2a2a] bg-gray-200'
+                        : 'text-[#2a2a2a] hover:text-[#2a2a2a] hover:bg-gray-100'
+                    }`}
+                  >
+                    {item.label}
+                  </Link>
+                )
+              )}
 
               {/* Social Media Icons for Mobile */}
               <div className="flex justify-center space-x-6 pt-4 pb-2 border-t border-gray-200 mt-4">
@@ -1184,50 +1209,6 @@ function ExperiencePage() {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-        </section>
-      </div>
-    </motion.div>
-  );
-}
-
-// Resume Page Component
-function ResumePage() {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-    >
-      <div className="min-h-screen">
-        <section className="pt-20 pb-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
-            <h1 className="text-5xl font-bold text-center text-[#2a2a2a] mb-12">
-              Resume
-            </h1>
-
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <iframe
-                src="/Olivia_s_Resume.pdf"
-                type="application/pdf"
-                className="w-full h-screen"
-              >
-                <p className="p-10">
-                  Your browser does not support PDFs.{' '}
-                  <a
-                    href="/Olivia_s_Resume.pdf"
-                    target="_blank"
-                    className="text-[#7f1325]"
-                  >
-                    <span className="underline">
-                      Click here to download the PDF
-                    </span>
-                  </a>
-                  .
-                </p>
-              </iframe>
             </div>
           </div>
         </section>
