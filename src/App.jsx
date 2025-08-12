@@ -1233,7 +1233,6 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/experience" element={<ExperiencePage />} />
-          <Route path="/resume" element={<ResumePage />} />
         </Routes>
       </div>
     </Router>
