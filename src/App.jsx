@@ -362,7 +362,7 @@ function AboutPage() {
             <div className="absolute top-32 md:top-40 right-8 md:right-32 lg:right-130 z-10 w-24 md:w-32 lg:w-40 text-right text-xs md:text-sm lg:text-lg text-black">
               some facts that define me
             </div>
-            <ul className="absolute top-40 md:top-80 right-8 md:right-32 lg:right-130 z-10 w-24 md:w-40 lg:w-50 text-xs md:text-sm text-black">
+            <ul className="absolute top-36 md:top-60 right-8 md:right-32 lg:right-130 z-10 w-24 md:w-40 lg:w-50 text-xs md:text-sm text-black">
               <li>home: st louis, mo</li>
               <li>house: port washington, ny</li>
               <li>age: {age} years old</li>
