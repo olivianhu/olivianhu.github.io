@@ -416,7 +416,7 @@ function AboutPage() {
               <div className="text-xs">
                 favs: tomorrow, and tomorrow, and tomorrow and a man called ove{' '}
                 <br />
-                currently reading: demon copperhead and evenings & weekends{' '}
+                currently reading: everything is tuberculosis{' '}
                 <br />
               </div>
               <div className="text-sm">goodreads: @oliviahu</div>
@@ -591,8 +591,7 @@ function AboutPage() {
                       tomorrow, and tomorrow
                     </li>
                     <li>
-                      currently reading: demon copperhead and evenings &
-                      weekends
+                      currently reading: everything is tuberculosis
                     </li>
                     <li>goodreads: @oliviahu</li>
                   </ul>
