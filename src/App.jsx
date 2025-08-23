@@ -416,8 +416,7 @@ function AboutPage() {
               <div className="text-xs">
                 favs: tomorrow, and tomorrow, and tomorrow and a man called ove{' '}
                 <br />
-                currently reading: everything is tuberculosis{' '}
-                <br />
+                currently reading: everything is tuberculosis <br />
               </div>
               <div className="text-sm">goodreads: @oliviahu</div>
             </div>
@@ -590,9 +589,7 @@ function AboutPage() {
                       favs: a man called ove, harry potter, and tomorrow, and
                       tomorrow, and tomorrow
                     </li>
-                    <li>
-                      currently reading: everything is tuberculosis
-                    </li>
+                    <li>currently reading: everything is tuberculosis</li>
                     <li>goodreads: @oliviahu</li>
                   </ul>
                 </div>
@@ -1032,9 +1029,9 @@ function ExperiencePage() {
       duration: 'Summer 2025',
       location: 'New York, NY',
       description: [
-        'Spearheaded the full-stack development of the Insurance Hub, the first centralized dashboard for Business Insurance within Gusto’s platform',
-        'Contributed to service-to-service communication logic and ensured backward compatibility during backend changes',
-        'Designed and implemented new API endpoints across multiple codebases, enabling seamless policy data retrieval',
+        'Spearheaded full-stack development of Gusto’s first centralized Business Insurance dashboard, projected to reduce a significant portion of 8,000+ annual support cases and raise average policies per customer by 9%',
+        'Designed and implemented new API endpoints and backend workflows powering the General Liability landing page, projected to add +$2.8M in FY2026 ARR',
+        'Enhanced reliability by defining SLOs in Datadog via Terraform, unifying alerting and dashboard standards',
       ],
       technologies: ['React', 'Typescript', 'Ruby on Rails', 'Git'],
     },
@@ -1079,8 +1076,23 @@ function ExperiencePage() {
       id: 1,
       image: '/upenn.png',
       school: 'University of Pennsylvania',
+      duration: 'August 2025 - May 2027',
+      degree: 'Masters of Science in Engineering in Data Science',
+      location: 'Philadelphia, PA',
+      gpa: '4.0/4.0',
+      coursework: [
+        'Machine Learning',
+        'Artificial Intelligence',
+        'Big Data Analytics',
+        'Databases and Information Systems',
+      ],
+    },
+    {
+      id: 2,
+      image: '/upenn.png',
+      school: 'University of Pennsylvania',
       duration: 'August 2023 - May 2027',
-      degree: 'Bachelor of Science in Engineering (BSE) in Computer Science',
+      degree: 'Bachelor of Science in Engineering in Computer Science',
       location: 'Philadelphia, PA',
       concentration: 'Artificial Intelligence',
       minor: 'Mathematics',
@@ -1090,6 +1102,15 @@ function ExperiencePage() {
         'Penn Labs',
         'Theta Tau',
         'Women in CS (Education Committee)',
+      ],
+      coursework: [
+        'Data Structures & Algorithms',
+        'Computer Systems',
+        'Operating Systems',
+        'Discrete Mathematics',
+        'Probability & Statistics',
+        'Linear Algebra',
+        'Multivariable Calculus',
       ],
     },
   ];
@@ -1190,18 +1211,32 @@ function ExperiencePage() {
                   </div>
                   <div>
                     <ul className="space-y-2">
+                      {education.concentration && (
+                        <li className="flex items-start text-gray-600">
+                          <span className="ml-2">
+                            <strong>Concentration:</strong>{' '}
+                            {education.concentration}, <strong>Minor:</strong>{' '}
+                            {education.minor}
+                          </span>
+                        </li>
+                      )}
                       <li className="flex items-start text-gray-600">
                         <span className="ml-2">
-                          Concentration: {education.concentration}, Minor:{' '}
-                          {education.minor}
+                          <strong>GPA:</strong> {education.gpa}
                         </span>
                       </li>
+                      {education.activities && (
+                        <li className="flex items-start text-gray-600">
+                          <span className="ml-2">
+                            <strong>Activities:</strong>{' '}
+                            {education.activities.join(', ')}
+                          </span>
+                        </li>
+                      )}
                       <li className="flex items-start text-gray-600">
-                        <span className="ml-2">GPA: {education.gpa}</span>
-                      </li>
-                      <li className="flex items-start text-gray-600">
-                        <span className="ml-2">
-                          Activties: {education.activities.join(', ')}
+                        <span className="ml-2 ">
+                          <strong>Relevant Coursework:</strong>{' '}
+                          {education.coursework.join(', ')}
                         </span>
                       </li>
                     </ul>
